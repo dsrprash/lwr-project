@@ -1,6 +1,16 @@
 <template>
     <main>
         <img src="/public/assets/recipes-logo.png" alt="logo" />
-        <h1>Hello World Recipes!</h1>
+        <h1>Hello User!</h1>
     </main>
+    <template iterator:eachtile={tiles}>
+        <div key={eachtile.tileName} class="box">
+            <a onclick={handleClick} data-orgurl={eachtile.orgUrl}>
+            <span >
+                <img src={eachtile.tileIcon} />
+                {eachtile.orgName}
+            </span>
+        </a>
+        </div>
+    </template>
 </template>
